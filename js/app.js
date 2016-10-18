@@ -22,11 +22,9 @@ $("#menu").append($select);
   // append option to select
   $select.append($option);
   });
-// create a button
-var $button = $("<button>Go</button>");
-$("#menu").append($button);
-// bind click to button
-$button.click(function(){
+
+// bind click to listener to the select
+$select.change(function(){
   // Go to select's current location
   window.location = $select.val();
 });
