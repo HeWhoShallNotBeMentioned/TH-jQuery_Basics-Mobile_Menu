@@ -10,6 +10,10 @@ $("#menu").append($select);
   var $anchor = $(this);
   // create an option
   var $option = $("<option></option>");
+  // Deal with selected options depending upon current page
+  if ($anchor.parent().hasClass("selected")) {
+    $option.prop('selected', true);
+  }
   // options value is the href of the page
   $option.val($anchor.attr("href"));
   // options text is the text of the links
@@ -26,5 +30,3 @@ $button.click(function(){
   // Go to select's current location
   window.location = $select.val();
 });
-
-// Deal with selected options depending upon current page
