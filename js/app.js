@@ -27,6 +27,4 @@ $button.click(function(){
   window.location = $select.val();
 });
 
-// Modify CSS to hide links on small width and show button and select box
-// Also hides select box and button on large width
 // Deal with selected options depending upon current page
